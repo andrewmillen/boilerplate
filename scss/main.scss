@@ -1,0 +1,42 @@
+// ====================================================
+// Micro Clearfix
+// ====================================================
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+// ====================================================
+// Variables
+// ====================================================
+
+$white : #FFFFFF;
+
+// ====================================================
+// Utility Classes
+// ====================================================
+
+.alignleft { text-align: left; }
+.alignright { text-align: right; }
+.aligncenter { text-align: center; }
+
+.fleft { float: left; }
+.fright { float: right; }
+
+.hidden-mobile { 	@media screen and (max-width: 480px) { display: none; } }
+
+// ====================================================
+// Custom Styles
+// ====================================================
+
+

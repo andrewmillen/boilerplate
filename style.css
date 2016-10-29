@@ -1,0 +1,12 @@
+/*
+Theme Name: Boilerplate
+Author: Andrew Millen
+Author URI: http://www.andrewmillen.com/
+Description: A starting point theme based on HTML5boilerplate with opinionated defaults.
+Version: 1.0
+Tags: blue, white, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post
+Text Domain: boilerplate;
+*/
+
+@import url(css/normalize.css);
+@import url(css/main.css);
