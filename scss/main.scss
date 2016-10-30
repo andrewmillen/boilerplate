@@ -1,42 +1,9 @@
-// ====================================================
-// Micro Clearfix
-// ====================================================
-
-.cf:before,
-.cf:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.cf:after {
-    clear: both;
-}
-
-.cf {
-    *zoom: 1;
-}
+@import 'normalize.scss';
+@import 'mixins.scss';
+@import 'utilities.scss';
+@import 'variables.scss';
+@import 'breakpoints.scss';
 
 // ====================================================
-// Variables
+// Custom styles
 // ====================================================
-
-$white : #FFFFFF;
-
-// ====================================================
-// Utility Classes
-// ====================================================
-
-.alignleft { text-align: left; }
-.alignright { text-align: right; }
-.aligncenter { text-align: center; }
-
-.fleft { float: left; }
-.fright { float: right; }
-
-.hidden-mobile { 	@media screen and (max-width: 480px) { display: none; } }
-
-// ====================================================
-// Custom Styles
-// ====================================================
-
-

@@ -7,7 +7,7 @@
 function project_scripts_styles() {
   wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css',false,'1.0','all');
 }
-add_action( 'wp_enqueue_scripts', 'project_scripts_styles' );
+add_action( 'wp_enqueue_scripts', 'project_scripts_styles', 1);
 
 
 // Adds featured image to posts
