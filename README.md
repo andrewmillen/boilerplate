@@ -1,0 +1,1 @@
+This is a tiny Wordpress boilerplate theme designed to give you a lightning quick start on small, custom WP themes.
