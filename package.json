@@ -1,7 +1,7 @@
 {
-  "name": "dogwoodgrove",
+  "name": "boilerplate",
   "version": "1.0.0",
-  "description": "A custom theme for Dogwood Grove HOA developed by Simple Focus",
+  "description": "A boilerplate theme developed by Simple Focus",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,12 +9,16 @@
   "author": "Simple Focus",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.18.5",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^3.1.1",
     "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.9.1",
+    "gulp-uglify": "^2.0.0",
     "gulp-watch": "^4.3.11"
   }
 }

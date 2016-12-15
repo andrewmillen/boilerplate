@@ -1,0 +1,10 @@
+/*
+ *
+ * This file is enqueued after style.css. 
+ * That means when the site lives on a server, you can make changes
+ * in vanilla css without disrupting the proper development pipeline. 
+ * Your changes won't be overwritten when new sass is compiled.
+ * 
+ * Be sure to comment on any changes you make!
+ *
+ */

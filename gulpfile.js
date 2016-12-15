@@ -8,27 +8,39 @@ var imagemin = require('gulp-imagemin');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
+var browserSync = require('browser-sync');
+var reload = browserSync.reload;
 
+
+// Browser sync 
+gulp.task('browser-sync', function() {
+    var files = [ 'sass/**/*.scss', 'js/**/*.js', '**/*.php' ]; 
+    browserSync.init(files, {
+    proxy: "boilerplate.dev", // Change this!
+    notify: false
+    });
+});
 
 // Compile sass
 gulp.task('sass', function(){
   return gulp.src('sass/**/*.scss')
-    .pipe(sass({outputStyle: 'compressed'}))
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(autoprefixer())
-    .pipe(gulp.dest('./css'))
+    .pipe(gulp.dest('./assets/css'))
+    .pipe(reload({stream:true}))
     .pipe(notify("Sass Compiled"))
     .pipe(sourcemaps.init())
-    .pipe(sourcemaps.write('./'))
+    .pipe(sourcemaps.write('./'));
 });
 
 // Concatenate and minify javascript
 gulp.task('js', function(){
-    return gulp.src(['js/*.js']) // Doesn't include subfolders!
+    return gulp.src(['js/**/*.js'])
         .pipe(concat('scripts.js'))
-        .pipe(gulp.dest('./js/compiled'))
+        .pipe(gulp.dest('./assets/js'))
         .pipe(rename('scripts.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('./js/compiled'))
+        .pipe(gulp.dest('./assets/js'))
         .pipe(notify("JS Minified"))
 });
 
@@ -41,7 +53,7 @@ gulp.task('images', () =>
 );
 
 // Default task
-gulp.task('default', function() {
+gulp.task('default', ['sass', 'browser-sync'], function() {
   gulp.watch('sass/**/*.scss', ['sass']);
   gulp.watch('js/**/*.js', ['js']);
 });
